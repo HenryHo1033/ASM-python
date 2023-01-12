@@ -16,7 +16,7 @@ class LuckyDraw():
 
         while not self.validate():
             print("Your name must be CAPITAL or Space character, Please try again.")
-            self.__name = input("Please input your name to join the LuckyDraw.")
+            self.__name = input("Please input your name to join the LuckyDraw： ")
 
 
     def validate(self):

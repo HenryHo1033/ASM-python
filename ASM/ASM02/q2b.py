@@ -49,4 +49,3 @@ class RandomList():
 
 randomList = RandomList()
 randomList.show_groups()
-
