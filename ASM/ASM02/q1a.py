@@ -32,3 +32,5 @@ class Square():
 
 square = Square()
 square.print_pattern()
+
+print ("Hi, this is from GIT modify")
