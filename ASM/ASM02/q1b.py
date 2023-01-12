@@ -33,7 +33,5 @@ class Square():
             print()
 
 
-
-
 square = Square()
 square.print_pattern()
