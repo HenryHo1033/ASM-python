@@ -1,5 +1,11 @@
+#Purpose : prints the square with apattern according to the examples below.
+
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
 class Square():
 
+#Input
     def __init__(self):
 
         self.__size = input("Enter size of pattern: ")
