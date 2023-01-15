@@ -1,4 +1,12 @@
+#Purpose : a list of numbers and return the multiple of only the negative numbers.
+# function returns
+
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
+
 class MultNeg():
+
 
     def multNeg(self, numlist):
 
@@ -22,6 +30,7 @@ class MultNeg():
 
         return multneg
 
+#check Larger numlist
     def checkLarger(self, numlist, check):
 
         if len(numlist) == 0 or len(check) == 0:

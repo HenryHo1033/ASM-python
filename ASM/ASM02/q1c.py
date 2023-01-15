@@ -1,4 +1,8 @@
+#Purpose :  reads in the GPA, and then prints the price.
 
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
 class Discount():
 
     def __init__(self):
@@ -18,7 +22,7 @@ class Discount():
         except:
             return False
 
-
+#input check
     def validate(self):
 
         if len(self.__gpa) == 0 or self.__gpa.isspace():

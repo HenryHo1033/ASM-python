@@ -1,7 +1,13 @@
+#Purpose : rolls two dice of which one of the dice with the above defect,
+
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
 import random
 
 class Counting():
 
+#count
     def __init__(self):
 
         self.__dice1 = [1,2,3,4,5,6]
@@ -23,7 +29,6 @@ class Counting():
 
         self.__sum = 0
 
-    @property
     def counting(self):
 
         return self.__sumCount
@@ -39,7 +44,7 @@ class Counting():
 
         return sum((self.__dice1[randIndex[0]],self.__dice2[randIndex[1]]))
 
-
+#count result
     def count(self):
 
         self.__sum = self.total_sum(self.rolling())

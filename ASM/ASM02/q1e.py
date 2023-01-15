@@ -1,3 +1,10 @@
+#Purpose : print the maximum, minimum, and the average daily rate
+#advice of "BUY", "HOLD" and "SELL"
+
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
+
 class Stock():
 
     def __init__(self):
@@ -23,6 +30,7 @@ class Stock():
         except:
             return False
 
+#check
     def validate(self):
 
         if len(self.__rate) == 0 or self.__rate.isspace():

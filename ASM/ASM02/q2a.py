@@ -1,3 +1,9 @@
+#Purpose : A lucky draw
+
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
+
 import re
 
 class LuckyDraw():
@@ -29,7 +35,7 @@ class LuckyDraw():
 
             return True
 
-
+#Category check
     def char_count(self, name):
 
         for char in name:
@@ -46,6 +52,7 @@ class LuckyDraw():
 
                 self.__cate_iii_count += 1
 
+#return value
     def isWinLuckyDraw(self):
 
         self.char_count(self.__name)

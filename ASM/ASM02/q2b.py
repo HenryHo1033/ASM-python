@@ -1,7 +1,14 @@
+#Purpose : generates K number of groups of N numbers
+
+#Written by Kenny Ng Wai Yu
+#On 15/1/2023
+#For Assignment 2
+
 import random
 
 class RandomList():
 
+#input check
     def __init__(self):
 
         self.__entries = int(input("Enter how many numbers are in each entry (N): "))
@@ -20,6 +27,7 @@ class RandomList():
             self.__groups = int(input("Enter how many groups (K): "))
 
 
+#value check
     def n_validate(self):
 
         if self.__entries < 6 or self.__entries > 10:
@@ -40,6 +48,7 @@ class RandomList():
 
             return True
 
+#random number
     def show_groups(self):
 
         for g in range(self.__groups):
