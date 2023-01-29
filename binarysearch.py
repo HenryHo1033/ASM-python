@@ -1,29 +1,52 @@
-class binarySearch():
+import time
 
-    def binary (arr, 1, r, x):
+sequence = []
+t = time.perf_counter()
+for i in range(0, 100000001):
+    sequence.append(i)
 
-        if r >=1:
+print(f'coast:{time.perf_counter() - t:.8f}s')
 
-            mid = int(1+ (r - 1) / 2)
-            if arr[mid] == x:
-                return mid
 
-        elif arr[mid] > x:
-            return binarySearch(arr, 1, mid-1, x)
+def binary_search(sequence, target):
+    left = 0
+    right = len(sequence) - 1
+
+    while left <= right:
+
+        mid = int((left + right) / 2)
+
+        if sequence[mid] > target:
+
+            right = mid - 1
+
+        elif sequence[mid] < target:
+
+            left = mid + 1
 
         else:
-            return binarySearch(arr, mid+1, r, x)
 
-            else:
-                return -1
+            return mid + 1
 
-    arr = [2, 3, 4, 10, 40]
-    x = 10
+    return None
 
-    result = binary(arr, 0, len(arr)-1, x)
 
-    if result != -1:
-        print ("元素在數組中的索引為  %d" % result )
+t = time.perf_counter()
+result = binary_search(sequence, 99999999)
+print(f'coast:{time.perf_counter() - t:.8f}s')
 
-    else:
-        print ("元素不在數組中")
+if result is None:
+
+    print("所查詢的元素不在列表內")
+
+else:
+
+    print(f"所查詢的元素在第{result}位")
+
+t = time.perf_counter()
+for index, item in enumerate(sequence):
+
+    if item == 99999999:
+        break
+
+print(f'coast:{time.perf_counter() - t:.8f}s')
