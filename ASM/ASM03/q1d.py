@@ -11,4 +11,4 @@ def spa(N):
     return spa(N-3) * 2 + spa(N-2) + spa(N-1)
 
 
-print (spa(3))
+print (spa(20))
