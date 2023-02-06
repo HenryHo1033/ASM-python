@@ -3,17 +3,17 @@ params = "50.4,22.3,12,-2,45,82,123.5,-12,35"
 params2 = "50.4,22.3,12,-2,45,82,123.5,-12,35a"
 params3 = [1,23,4,5,6,78,8]
 
-def validate(params):
+def validate(cslist):
 
-    if isinstance(params, str) is False:
+    if isinstance(cslist, str) is False:
 
         raise ValueError("Params is not String")
 
-def process_cslist(params):
+def process_cslist(cslist):
 
-    validate(params)
+    validate(cslist)
 
-    numbers = params.split(",")
+    numbers = cslist.split(",")
 
     for number in numbers:
 
