@@ -19,3 +19,4 @@ def genRanNumList(N):
 print (genRanNumList(10))
 print (genRanNumList(20))
 print (genRanNumList(30))
+print (genRanNumList(0))
