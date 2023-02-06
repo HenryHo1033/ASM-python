@@ -27,7 +27,7 @@ pwds = [        "12345678", #False
                 "+-*/+-*/", #False
                 "ABCDEFGH", #False
                 "T9+-*/a", #False
-                "1234567890+-*/88abcdefhYPINPk1gr" #False
+                "1234567890+-*/88abcdefhYPINPk1gra", #False
                 "T9+-*/a8", #False
                 "T9+-/8a8", #False
                 "T9+*/a88", #True
