@@ -7,7 +7,7 @@ def validate(cslist):
 
     if isinstance(cslist, str) is False:
 
-        raise ValueError("Params is not String")
+        raise ValueError("Parameter is not a string")
 
 def process_cslist(cslist):
 
