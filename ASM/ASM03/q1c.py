@@ -6,8 +6,6 @@ def isValidPassword(pwd):
     regex2 = re.compile("(?:88)")
 
 
-    print (regex.search(pwd))
-
     if len(pwd) < 8 or len(pwd) > 32:
 
         return False
