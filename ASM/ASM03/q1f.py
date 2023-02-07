@@ -10,10 +10,11 @@ def bubble_sort(text):
 
             if len(text_list[j]) > len(text_list[j+1]):  #判斷當前名字長度是否大於下一個名字
 
+                count += 1
+                print ("第%d次"%count)
                 print ("交換前：%s"%text_list)
 
                 text_list[j], text_list[j+1] = text_list[j+1], text_list[j] #如果當前名字長度大過下一個，交換兩個名字位置
-                count += 1
 
                 print ("交換後：%s \n"%text_list,)
 
@@ -21,10 +22,11 @@ def bubble_sort(text):
 
                 if ord(text_list[j][0]) > ord(text_list[j+1][0]): #判斷當前名字與下一個名字首字母大小
 
+                    count += 1
+                    print("第%d次"%count)
                     print ("交換前：%s"%text_list)
 
                     text_list[j], text_list[j + 1] = text_list[j + 1], text_list[j] #如果首字母比下一個名字首字母大，交換兩個名字位置
-                    count += 1
 
                     print ("交換後：%s \n"%text_list)
 
