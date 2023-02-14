@@ -5,9 +5,10 @@ params3 = [1,23,4,5,6,78,8]
 
 def validate(cslist):
 
-    if isinstance(cslist, str) is False:
-
-        raise ValueError("Parameter is not a string")
+    try:
+        assert type(cslist) is str
+    except:
+        raise TypeError("cslist is not string type.")
 
 def process_cslist(cslist):
 

@@ -1,8 +1,10 @@
 import random
 
 def validate(N):
-
-    assert N > 0
+    try:
+        assert N > 0
+    except:
+        raise ValueError("N must > 0.")
 
 def genRanNumList(N):
 

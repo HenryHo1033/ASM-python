@@ -1,5 +1,11 @@
 def bubble_sort(text):
 
+    try:
+        assert type(text) is str
+    except:
+        raise TypeError("Text is not string.")
+
+
     text_list = text.split(' ')
     n = len(text_list)
     count = 0
