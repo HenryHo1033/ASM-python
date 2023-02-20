@@ -10,28 +10,14 @@ def spa(N):
 
         return 1
 
-    return spa(N - 3) * 2 + spa(N - 2) + spa( N - 1)
+    return spa(N - 3) * 2 + spa(N - 2) + spa(N - 1)
 
 
-t4 = time.perf_counter()
-print (spa(4))
-print (f"Time taken: {time.perf_counter() - t4:.8f}s \n")
+for i in range(4, 9):
 
-t5 = time.perf_counter()
-print (spa(5))
-print (f"Time taken: {time.perf_counter() - t5:.8f}s \n")
-
-t6 = time.perf_counter()
-print (spa(6))
-print (f"Time taken: {time.perf_counter() - t6:.8f}s \n")
-
-t7 = time.perf_counter()
-print (spa(7))
-print (f"Time taken: {time.perf_counter() - t7:.8f}s \n")
-
-t8 = time.perf_counter()
-print (spa(8))
-print (f"Time taken: {time.perf_counter() - t8:.8f}s \n")
+    time_start = time.perf_counter()
+    spa(i)
+    print (f"N ={i} Time taken:{time.perf_counter() - time_start:.8f}s")
 
 
 def spa_iter(N):
@@ -55,5 +41,5 @@ def spa_iter(N):
 
 
 t_iter = time.perf_counter()
-print (spa_iter(10))
-print (f"Time taken: {time.perf_counter() - t_iter:.8f}s \n")
+spa_iter(10)
+print (f"spa_iter() Time taken: {time.perf_counter() - t_iter:.8f}s \n")
