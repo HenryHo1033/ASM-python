@@ -8,7 +8,7 @@ def spa(N):
 
         return 1
 
-    return spa(N-3) * 2 + spa(N-2) + spa(N-1)
+    return spa(N - 3) * 2 + spa(N - 2) + spa(N - 1)
 
 
-print (spa(20))
+print (spa(10))
