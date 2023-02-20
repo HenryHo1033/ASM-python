@@ -1,3 +1,5 @@
+import  time
+
 def find_pi_square(N):
 
     try:
