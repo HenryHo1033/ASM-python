@@ -1,12 +1,12 @@
 def find_pi_square(N):
 
     try:
-        assert N >= 0
+        assert N > 0
     except:
         raise Exception("N must be > 0")
 
     N = int (N)
-    
+
     if N == 1:
 
         return 8
