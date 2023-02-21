@@ -1,3 +1,8 @@
+#Purpose :  function spa with integer parameter N
+
+#Written by Kenny Ng Wai Yu
+#On 21/2/2023
+#For Assignment 3
 def spa(N):
 
     if N == 0:

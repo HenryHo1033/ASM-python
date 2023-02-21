@@ -1,3 +1,9 @@
+#Purpose :  Apply selection sort to the following words by hand according to the following requirements.
+
+#Written by Kenny Ng Wai Yu
+#On 21/2/2023
+#For Assignment 3
+
 def bubble_sort(text):
 
     try:

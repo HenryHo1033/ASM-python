@@ -1,3 +1,9 @@
+#Purpose :  recursive way of finding spaghetti numbers
+
+#Written by Kenny Ng Wai Yu
+#On 21/2/2023
+#For Assignment 3
+
 import time
 
 def spa(N):

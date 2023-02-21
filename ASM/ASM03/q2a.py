@@ -1,3 +1,9 @@
+#Purpose :  Turn the above into a recursive function.
+
+#Written by Kenny Ng Wai Yu
+#On 21/2/2023
+#For Assignment 3
+
 import  time
 
 def find_pi_square(N):

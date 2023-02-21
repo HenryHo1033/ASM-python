@@ -1,3 +1,8 @@
+#Purpose : registering an account on a game website and a ‘strange’ password rule
+
+#Written by Kenny Ng Wai Yu
+#On 21/2/2023
+#For Assignment 3
 import re
 
 def isValidPassword(pwd):
