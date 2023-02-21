@@ -4,7 +4,7 @@
 #On 21/2/2023
 #For Assignment 3
 
-import  time
+import time
 
 def find_pi_square(N):
 
