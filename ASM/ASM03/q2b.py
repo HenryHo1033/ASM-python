@@ -22,10 +22,7 @@ def spa(N):
 def spa_iter(N):
     spa_list = [0, 1, 1]
 
-    if N == 0:
-        return spa_list[N]
-
-    elif N == 1 or N == 2:
+    if N in [0, 1, 2]:
 
         return spa_list[N]
 
