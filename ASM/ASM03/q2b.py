@@ -19,23 +19,15 @@ def spa(N):
     return spa(N - 3) * 2 + spa(N - 2) + spa(N - 1)
 
 
-for i in range(4, 9):
-
-    time_start = time.perf_counter()
-    spa(i)
-    print (f"N = {i} Time taken:{time.perf_counter() - time_start:.8f}s")
-
-
-
 def spa_iter(N):
     spa_list = [0, 1, 1]
 
     if N == 0:
-        return spa_list[0]
+        return spa_list[N]
 
     elif N == 1 or N == 2:
 
-        return spa_list[1]
+        return spa_list[N]
 
     else:
 
@@ -49,5 +41,9 @@ def spa_iter(N):
 for i in range(4, 9):
 
     time_start = time.perf_counter()
+    spa(i)
+    print(f"spa({i}) Time taken:{time.perf_counter() - time_start:.8f}s")
+
+    time_start = time.perf_counter()
     spa_iter(i)
-    print (f"spa_iter({i}) Time taken:{time.perf_counter() - time_start:.8f}s")
+    print (f"spa_iter({i}) Time taken:{time.perf_counter() - time_start:.8f}s\n")
