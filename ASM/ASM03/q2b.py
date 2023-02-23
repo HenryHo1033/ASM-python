@@ -28,17 +28,16 @@ for i in range(4, 9):
 
 
 def spa_iter(N):
+    spa_list = [0, 1, 1]
 
     if N == 0:
-        return 0
+        return spa_list[0]
 
     elif N == 1 or N == 2:
 
-        return 1
+        return spa_list[1]
 
     else:
-
-        spa_list = [0, 1, 1]
 
         for number in range (3, N + 1):
 
