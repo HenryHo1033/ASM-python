@@ -23,7 +23,8 @@ for i in range(4, 9):
 
     time_start = time.perf_counter()
     spa(i)
-    print (f"N ={i} Time taken:{time.perf_counter() - time_start:.8f}s")
+    print (f"N = {i} Time taken:{time.perf_counter() - time_start:.8f}s")
+
 
 
 def spa_iter(N):
@@ -37,15 +38,17 @@ def spa_iter(N):
 
     else:
 
-        sum = 0
+        spa_list = [0, 1, 1]
 
-        for number in range (2, N + 1):
+        for number in range (3, N + 1):
 
-            sum += 4 * number - 9
+            spa_list.append(spa_list[number - 3] * 2 + spa_list[number - 2] + spa_list[number - 1])
 
-    return sum
+    return spa_list[N]
 
 
-t_iter = time.perf_counter()
-spa_iter(10)
-print (f"spa_iter() Time taken: {time.perf_counter() - t_iter:.8f}s \n")
+for i in range(4, 9):
+
+    time_start = time.perf_counter()
+    spa_iter(i)
+    print (f"spa_iter({i}) Time taken:{time.perf_counter() - time_start:.8f}s")
