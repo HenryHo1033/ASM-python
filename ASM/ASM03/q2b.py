@@ -5,14 +5,16 @@
 #For Assignment 3
 
 import time
+from functools import lru_cache
 
+@lru_cache
 def spa(N):
 
     if N == 0:
 
         return 0
 
-    elif N == 1 or N == 2:
+    elif N in [1, 2]:
 
         return 1
 
@@ -22,7 +24,7 @@ def spa(N):
 def spa_iter(N):
     spa_list = [0, 1, 1]
 
-    if N in [0, 1, 2]:
+    if N < 3:
 
         return spa_list[N]
 
