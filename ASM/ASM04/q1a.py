@@ -2,12 +2,19 @@ import timeit
 import random
 
 def validate(lst):
-
+    '''
+    Check lst value and type
+    :param lst:
+    :return:
+    '''
     check_value = [500, 1000, 2000, 4000]
 
-    for item in lst:
-        if item not in check_value:
-            raise Exception(f"數字必須是INT類型的500, 1000, 2000, 4000。目前的數字是{item}", )
+    if isinstance(lst,list) == False:
+        raise  Exception("參數應為list類型")
+    else:
+        for item in lst:
+            if item not in check_value:
+                raise Exception(f"數字必須是INT類型的500, 1000, 2000, 4000。目前的數字是{item}", )
 
 def funcA(lst):
     '''
