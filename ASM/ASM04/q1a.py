@@ -1,67 +1,55 @@
 import timeit
-
+import random
 
 def validate(lst):
-    '''
-    Check number type
-    '''
+
+    check_value = [500, 1000, 2000, 4000]
+
     for item in lst:
-        if item not in [500,1000,2000,4000]:
-            raise Exception("List只能是INT type中的500、1000、2000、4000")
+        if item not in check_value:
+            raise Exception(f"數字必須是INT類型的500, 1000, 2000, 4000。目前的數字是{item}", )
 
 def funcA(lst):
     '''
-    Big-O of Implementation
-    of the Procedure
     O(N)
+    :param lst:
+    :return:
     '''
-
-    return [i * 2 for i in lst]
-
-
+    return [i**2 for i in lst]
 
 def funcB(lst):
-
     '''
-    Big-O of Implementation
-    of the Procedure
-    O(N^2)
+    O(N log N)
+    :param lst:
+    :return:
     '''
-    n = len(lst)
-    for i in range(n):
-        min_idx = i
-        for j in range(i + 1, n):
-            if lst[j] < lst[min_idx]:
-                min_idx = j
-        lst[i], lst[min_idx] = lst[min_idx], lst[i]
-
-    return lst
+    return sorted(lst)
 
 def funcC(lst):
-
     '''
-    mystery functions
+    O(N^2)
+    :param lst:
+    :return:
     '''
 
+    n = len(lst)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if lst[j] < lst[i]:
+                lst[i], lst[j] = lst[j], lst[i]
+    return lst
 
-# Define the list sizes to test
-list_sizes = [500, 1000, 2000, 4000]
+sizes = [500, 1000, 2000, 4000]
 
-# Time the execution of each function for each list size
-times = {'funcA': [], 'funcB': [], 'funcC': []}
+validate(sizes)
 
-validate(list_sizes)
-for size in list_sizes:
-    lst = list(range(size))
-
-    # Time funcA
-    time = timeit.timeit('funcA(lst)', globals=globals(), number=100)
-    times['funcA'].append(round(time, 4))
-
-    # Time funcB
-    time = timeit.timeit('funcB(lst)', globals=globals(), number=100)
-    times['funcB'].append(round(time, 4))
-
-    # Time funcC
-    #time = timeit.timeit('funcC(lst)', globals=globals(), number=10)
-    #times['funcC'].append(round(time, 4))
+for size in sizes:
+    lst = [random.randint(1, 100) for _ in range(size)]
+    time_funcA = timeit.timeit(stmt=f"funcA({lst})", globals=globals(), number=1)
+    time_funcB = timeit.timeit(stmt=f"funcB({lst})", globals=globals(), number=1)
+    time_funcC = timeit.timeit(stmt=f"funcC({lst})", globals=globals(), number=1)
+    print(f"List size: {size}")
+    print(f"funcA time: {round(time_funcA, 4)} seconds")
+    print(f"funcB time: {round(time_funcB, 4)} seconds")
+    print(f"funcC time: {round(time_funcC, 4)} seconds")
+    print ()
