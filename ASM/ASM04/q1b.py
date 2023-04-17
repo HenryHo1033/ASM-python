@@ -1,3 +1,9 @@
+#Purpose :  application of the data structure of stack.
+
+#Written by Kenny Ng Wai Yu
+#On 17/4/2024
+#For Assignment 4
+
 def checkBalancedSymbols(exp):
 
     stack = []
