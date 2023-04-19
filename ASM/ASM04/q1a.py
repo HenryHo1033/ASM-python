@@ -1,3 +1,9 @@
+#Purpose :  Evaluate the scalability of the three functions empirically
+
+#Written by Kenny Ng Wai Yu
+#On 17/4/2024
+#For Assignment 4
+
 import timeit
 import random
 

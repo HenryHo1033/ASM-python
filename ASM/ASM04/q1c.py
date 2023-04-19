@@ -1,3 +1,9 @@
+#Purpose :  reads in data from a CSV file about basketball teams in NBA
+
+#Written by Kenny Ng Wai Yu
+#On 17/4/2024
+#For Assignment 4
+
 import csv
 import os
 

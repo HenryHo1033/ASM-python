@@ -1,3 +1,9 @@
+#Purpose :  A perfect binary tree
+
+#Written by Kenny Ng Wai Yu
+#On 17/4/2024
+#For Assignment 4
+
 from binarytree import Node, bst
 
 # Part (i)
