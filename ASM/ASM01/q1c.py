@@ -6,7 +6,7 @@
 
 class Ratings():
 	def __init__(self):
-		self._restaurant_name = input("Rate a restaurantEnter \n"
+		self._restaurant_name = input("Rate a restaurant \nEnter "
 					"restaurant name: ")
 
 		self._score = float(input("Enter score (0-10) for the restaurant: "))
